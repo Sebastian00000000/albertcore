@@ -1,7 +1,7 @@
 db.sqlite3
 
-treeorg/__pycache__
-treeorg/migrations
+treeorg/__pycache__/
+treeorg/migrations/
 
-tapeman/migrations
-tapeman/__pycache__
+tapeman/migrations/
+tapeman/__pycache__/
