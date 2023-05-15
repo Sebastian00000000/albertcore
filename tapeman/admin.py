@@ -16,4 +16,5 @@ class TapePoolAdmin(admin.ModelAdmin):
 @admin.register(Tape)
 class TapeAdmin(admin.ModelAdmin):
     list_display = ["barcode", "pool", "data_expiration", "full",]
+    # date_hierarchy = "data_expiration"
     autocomplete_fields = ["pool",]
