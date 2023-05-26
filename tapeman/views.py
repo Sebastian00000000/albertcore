@@ -1,13 +1,17 @@
+from typing import Any
 from django.shortcuts import render
 from django.shortcuts import HttpResponse
-from django.http import JsonResponse
-from django.views import View
+from django.views.generic.list import ListView
+from django.http import HttpRequest, HttpResponse
 from django.core.serializers import serialize
 from .models import *
 
 # Create your views here.
 
 
-class TapeView(View):
-    def get(self, request, *args, **kwargs):
-        ...
+class TapeView(ListView):
+    def get(self, request: HttpRequest, *args: Any, **kwargs: Any) -> HttpResponse:
+        tapes = Tape.objects.all()
+        return render(request, 'tapes.html', {
+            'tapes': tapes
+        })

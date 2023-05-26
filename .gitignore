@@ -1,6 +1,7 @@
 db.sqlite3
+static/
 
-newcore/__pycache_-_/
+newcore/__pycache__/
 newcore/static/
 
 treeorg/__pycache__/

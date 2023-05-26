@@ -1,11 +1,12 @@
 from django.db import models
 
 # Create your models here.
-
+class Region(models.Model):
+    name = models.CharField(max_length=8, unique=True)
 
 class Library(models.Model):
     hostname = models.CharField(max_length=16, unique=True)
-    management_ip = models.GenericIPAddressField(protocol="IPv4", unique=True)
+    management_ip = models.GenericIPAddressField(protocol="IPv4", unique=True, verbose_name="Management IP Address")
     slots = models.IntegerField(blank=True, null=True)
 
     def __str__(self) -> str:

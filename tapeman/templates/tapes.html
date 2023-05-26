@@ -1,0 +1,28 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Barcode</th>
+                <th>Date of data expiration</th>
+                <th>Pool</th>
+                <th>Full</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for tape in tapes %}
+            <tr>
+                <td>{{ tape.barcode }}</td>
+                <td>{{ tape.data_expiration }}</td>
+                <td>{{ tape.pool }}</td>
+                <td>{{ tape.full }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock content %}
