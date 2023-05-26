@@ -1,6 +1,7 @@
 db.sqlite3
 
 newcore/__pycache_-_/
+newcore/static/
 
 treeorg/__pycache__/
 treeorg/migrations/
